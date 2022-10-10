@@ -63,22 +63,22 @@ can use mutli level shapes inside any shape component
 #### `<Paragraph />`
 
 ##### Props
-  - width?: string | number;
-  - lineHeight?: number;
-  -background?: string;
-  -center?: boolean;
-  -style?: any;
-  -rowCount?: number;
+  - width?: string | number
+  - lineHeight?: number
+  - background?: string
+  - center?: boolean
+  - style?: any
+  - rowCount?: number
 
   #### `<Round />`
 
   ##### Props
-  -size?: number;
-  -children?: React.ReactNode;
-  -center?: boolean;
-  -my?: number;
-  -mx?: number;
-  -style?: any;
+  - size?: number;
+  - children?: React.ReactNode;
+  - center?: boolean;
+  - my?: number;
+  - mx?: number;
+  - style?: any;
   #### `<Square />`
 
   ##### Props
