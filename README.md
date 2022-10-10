@@ -1,46 +1,114 @@
-# Getting Started with Create React App
+## Skeleton
+![Drag Racing](demo_1.png)
+![Drag Racing](demo_2.png)
+### Usage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+- There will be two main component in this skeleton layout
+ one is <Section /> this is the main layout
+ this has three props
 
-In the project directory, you can run:
+- and other one is diffrent Shapes
+ <Paragraph> 
+ <Round>
+ <Square>
+ <Table>
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### <Section />
+- you can create multiple secion in same page
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+##### Props
+  contentReady: boolean; show skelteon or show content based on this prop
+  skeleton: React.ReactNode; skeleton structure, you can create your own structure, by using shapes  <Paragraph> , <Round>, <Square> ,<Table>
+  children: React.ReactNode; the actual content
 
-### `yarn test`
+##### Example
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
 
-### `yarn build`
+      <Section
+        contentReady={contentReady}
+        skeleton={
+          <>
+            <Row align="center">
+              <Round size={100} />
+              <div>
+                <Square mx={10} width={200} height={10} />
+                <br />
+                <Square mx={10} width={200} height={8} />
+              </div>
+            </Row>
+            <br />
+            <Paragraph rowCount={12} />
+            <br />
+            <Paragraph rowCount={9} />
+          </>
+        }
+      >
+        <div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              marginBottom: 30,
+            }}
+          >
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### shapes supported
+can use mutli level shapes inside any shape component
+#### <Paragraph />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##### Props
+  width?: string | number;
+  lineHeight?: number;
+  background?: string;
+  center?: boolean;
+  style?: any;
+  rowCount?: number;
 
-### `yarn eject`
+  #### <Round />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  ##### Props
+  size?: number;
+  children?: React.ReactNode;
+  center?: boolean;
+  my?: number;
+  mx?: number;
+  style?: any;
+  #### <Square />
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ##### Props
+  rounded?: boolean;
+  width?: string | number;
+  height?: number;
+  background?: string;
+  center?: boolean;
+  style?: any;
+  children?: React.ReactNode;
+  repeat?: number;
+  mx?: number;
+  my?: number;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  #### <Table />
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  ##### Props
+  width?: string | number;
+  height?: number;
+  background?: string;
+  center?: boolean;
+  style?: any;
+  children?: React.ReactNode;
+  repeat?: number;
+  columnCount?: number;
+  rowCount?: number;
+  header?: boolean | true;
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+  #### styling
+  there some defualt props like 
+  width, height, my , mx, center to align styling
+  also can pass style params to all components
