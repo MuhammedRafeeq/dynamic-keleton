@@ -5,22 +5,22 @@
 
 
 - There will be two main component in this skeleton layout
- one is <Section /> this is the main layout
+ one is `<Section />` this is the main layout
  this has three props
 
 - and other one is diffrent Shapes
- <Paragraph> 
- <Round>
- <Square>
- <Table>
+ `<Paragraph> `
+ `<Round>`
+ `<Square>`
+ `<Table>`
 
 
-#### <Section />
+#### `<Section />`
 - you can create multiple secion in same page
 
 ##### Props
   contentReady: boolean; show skelteon or show content based on this prop
-  skeleton: React.ReactNode; skeleton structure, you can create your own structure, by using shapes  <Paragraph> , <Round>, <Square> ,<Table>
+  skeleton: React.ReactNode; skeleton structure, you can create your own structure, by using shapes  `<Paragraph> , <Round>, <Square> ,<Table>`
   children: React.ReactNode; the actual content
 
 ##### Example
@@ -60,7 +60,7 @@
 
 ### shapes supported
 can use mutli level shapes inside any shape component
-#### <Paragraph />
+#### `<Paragraph />`
 
 ##### Props
   width?: string | number;
@@ -70,7 +70,7 @@ can use mutli level shapes inside any shape component
   style?: any;
   rowCount?: number;
 
-  #### <Round />
+  #### `<Round />`
 
   ##### Props
   size?: number;
@@ -79,7 +79,7 @@ can use mutli level shapes inside any shape component
   my?: number;
   mx?: number;
   style?: any;
-  #### <Square />
+  #### `<Square />`
 
   ##### Props
   rounded?: boolean;
@@ -93,7 +93,7 @@ can use mutli level shapes inside any shape component
   mx?: number;
   my?: number;
 
-  #### <Table />
+  #### `<Table />`
 
   ##### Props
   width?: string | number;
