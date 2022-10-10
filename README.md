@@ -63,52 +63,51 @@ can use mutli level shapes inside any shape component
 #### `<Paragraph />`
 
 ##### Props
-  width?: string | number;
-  lineHeight?: number;
-  background?: string;
-  center?: boolean;
-  style?: any;
-  rowCount?: number;
+  - width?: string | number;
+  - lineHeight?: number;
+  -background?: string;
+  -center?: boolean;
+  -style?: any;
+  -rowCount?: number;
 
   #### `<Round />`
 
   ##### Props
-  size?: number;
-  children?: React.ReactNode;
-  center?: boolean;
-  my?: number;
-  mx?: number;
-  style?: any;
+  -size?: number;
+  -children?: React.ReactNode;
+  -center?: boolean;
+  -my?: number;
+  -mx?: number;
+  -style?: any;
   #### `<Square />`
 
   ##### Props
-  rounded?: boolean;
-  width?: string | number;
-  height?: number;
-  background?: string;
-  center?: boolean;
-  style?: any;
-  children?: React.ReactNode;
-  repeat?: number;
-  mx?: number;
-  my?: number;
+  - rounded?: boolean;
+  - width?: string | number;
+  - height?: number;
+  - background?: string;
+  - center?: boolean;
+  - style?: any;
+  - children?: React.ReactNode;
+  - repeat?: number;
+  - mx?: number;
+  - my?: number;
 
   #### `<Table />`
 
   ##### Props
-  width?: string | number;
-  height?: number;
-  background?: string;
-  center?: boolean;
-  style?: any;
-  children?: React.ReactNode;
-  repeat?: number;
-  columnCount?: number;
-  rowCount?: number;
-  header?: boolean | true;
+  - width?: string | number;
+  - height?: number;
+  - background?: string;
+  - center?: boolean;
+  - style?: any;
+  - children?: React.ReactNode;
+  - repeat?: number;
+  - columnCount?: number;
+  - rowCount?: number;
+  - header?: boolean | true;
 
 
   #### styling
-  there some defualt props like 
-  width, height, my , mx, center to align styling
-  also can pass style params to all components
+  - there some defualt props like width, height, my , mx, center to align styling
+  - also can pass style params to all components for custom styling
